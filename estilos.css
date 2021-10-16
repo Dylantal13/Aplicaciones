@@ -1,0 +1,264 @@
+/* GLOBAL */ 
+
+*{
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+@font-face{
+    font-family:helvetica;
+    src: url(Helvetica.ttf);
+}
+@font-face{
+    font-family:helvetica2;
+    src: url(Helvetica-Regular.ttf);
+}
+@font-face{
+    font-family:helvetica3;
+    src: url(Helvetica-Thin.ttf);
+}
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    background: url();
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+/* Centrado de titulos */
+.Bienvenida{
+    text-align: center;
+    font-family:helvetica2;
+    color: black;
+    z-index: 1;
+}
+#Bienvenida{
+    margin-top: 600px;
+    z-index: 1;
+}
+	
+h3{
+    text-align: center;
+    color: black;
+    z-index: 1;
+    font-family:helvetica2;
+}
+
+
+
+/* ESTILOS PARA EL HEADER */
+header{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 999;
+    top: 0;left: 0;
+}
+
+/*-------------- EFECTO WAVE ---------------------------- */
+.bg-color{
+    width: 100%;
+    height: 30%;
+    background: #EC1C24;
+    position: absolute;
+    top: 0;
+}
+
+.wave{
+    width: 6000px;
+    height: 45%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../wd2.svg);
+    background-position: bottom;
+}
+
+.w1{
+    animation: w1 6s linear infinite;
+}
+
+.w2{
+    animation: w2 6s linear -.125s infinite, desplazamiento 6s ease -.125s infinite;
+    opacity: 0.5;
+}
+
+@keyframes w1 {
+    0%{
+        margin-left: 0;
+    }
+    100%{
+        margin-left: -1600px;
+    }
+}
+
+@keyframes w2 {
+    0%{
+        margin-left: 0;
+    }
+    100%{
+        margin-left: -1600px;
+    }
+}
+
+@keyframes desplazamiento {
+    0%, 100%{
+        transform: translateY(-25px);
+    }
+
+    50%{
+        transform: translateY(10px);
+    }
+}
+
+/* FIN DE WAVE----------------------------- */
+.Navegacion{
+    width: 100%;
+    background: #EC1C24;
+    display:flex;
+    height: 60px;
+    max-width: 100%;
+    margin: auto;
+    justify-content:space-between;
+    
+}
+
+/* CAMBIO DE COLOR AL SCROLLEAR LA NAVBAR */
+.blanco{
+    background: #FFF;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+    transition: all 500ms ease;
+    opacity: 1;
+    visibility: visible;
+}
+.negro{
+    color: #000 !important;   
+    
+}
+.negro:hover{
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+}
+/* FIN CAMBIO DE COLOR DE NAVBAR  */
+.Navegacion .logo{
+    margin-left: 10%;
+}
+.Navegacion .menu{
+		float: right;
+		line-height: 60px;
+        margin-right:10%;
+}
+.Navegacion .menu a{
+        font-family:helvetica2;
+		display: inline-block;
+		padding: 15px;
+		line-height: normal;
+		text-decoration: none;
+		color: #fff;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+		font-size: 13px;
+		margin-right: 10px; 
+}
+
+.Navegacion .menu a:hover{
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+
+@media screen and (max-width: 990px){
+    .Navegacion > .menu{
+        display: none;
+        visibility: hidden;
+    }
+    
+    
+}
+.Navegacion .btn-menu label {
+    margin-right: 0;
+    color: #fff;
+    margin-top: 5px;
+    font-size: 35px;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 991px){
+    .Navegacion .btn-menu label{
+        visibility: visible;
+    }
+   
+}
+
+/* Estilos de la barra de navegacion */
+#btn-menu{
+display: none;
+}
+.container-menu{
+    position: absolute;
+    background: rgba(0,0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;left: 0;
+    margin-top: 60px;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 32% !important;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+    z-index: 1;
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+.cont-menu nav{
+    transform: translateY(15%),
+
+}
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+    
+}
+.cont-menu label {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#Banner{
+max-width: 100%;
+width: 100%;
+height: 400px;
+    margin-top: 60px;
+}
+
+
+/* footer */
+
