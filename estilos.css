@@ -47,6 +47,24 @@ h3{
     z-index: 1;
     font-family:helvetica2;
 }
+h1{
+  text-align: center;
+    color: black;
+    z-index: 1;
+    font-family:helvetica2  
+}
+.descripcion{
+margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    font-size: 17px;
+    
+}
+
+#entrada {
+    margin-left: 32%;
+    box-shadow: 0px 20px 20px rgba(0,0,0,0.3);
+}
 
 
 
